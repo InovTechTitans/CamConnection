@@ -1,7 +1,7 @@
 # CamConnection
 Support Camera IP and Wi-fi with SRTP
 --------------------
-Primeiro intale os pacote da pasta pip:
+Primeiro intale os pacotes da pasta pip:
 Baixe os arquivos
 
 Abra o cmd e digite um e após instalação, digite o outro:
