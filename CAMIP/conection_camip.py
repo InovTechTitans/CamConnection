@@ -2,17 +2,15 @@ import os
 
 import cv2
 
+from constants import URL
+
 os.environt["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp"
 
-URL = "rstp://{}:{}@{}:{}/onvifl".format(
-    os.getenv("USERNAME"),
-    os.getenv("PASSWORD"),
-    os.getenv("IP"),
-    os.getenv("PORT"),
-)
-print("Conectado com: " + URL)
+camera_url = URL.format(type="onvifl")
 
-cap = cv2.VideoCapture(URL, cv2.CAP_FFMPEG)
+print("Conectado com: " + camera_url)
+
+cap = cv2.VideoCapture(camera_url, cv2.CAP_FFMPEG)
 
 while True:
     ret, frame = cap.read()

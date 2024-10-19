@@ -1,7 +1,9 @@
 import cv2
 
+from constants import URL
+
 # URL RTSP da câmera WiFi
-rtsp_url = "rtsp://usuário:senha@ip_da_camera:porta/stream"
+rtsp_url = URL.format(type="stream")
 
 # Abrindo o stream de vídeo
 cap = cv2.VideoCapture(rtsp_url)

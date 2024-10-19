@@ -1,10 +1,12 @@
 import cv2
 from flask import Flask, Response
 
+from constants import URL
+
 app = Flask(__name__)
 
 # URL RTSP da câmera WiFi
-rtsp_url = "rtsp://usuário:senha@ip_da_camera:porta/stream"
+rtsp_url = URL.format(type="stream")
 
 
 @app.route("/video_feed")
