@@ -19,7 +19,7 @@ else:
         cv2.imshow("Câmera WiFi", frame)
 
         # Fechar a janela ao pressionar a tecla 'Esc'
-        if cv2.waitKey(1) & 0xFF == ord('Esc'):
+        if cv2.waitKey(1) & 0xFF == ord("Esc"):
             break
 
 # Fechando o stream
