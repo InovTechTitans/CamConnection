@@ -1,7 +1,12 @@
-OUTPUT_RESULTS = "output/results.csv"
+INPUT_PATH = "input/"
+OUTPUT_PATH = "output/"
 
-OUTPUT_INTERPOLATED_RESULTS = "output/results_interpolated.csv"
+OUTPUT_REALTIME_DETECTED_PLATES = OUTPUT_PATH + "realtime_detected.csv"
 
-OUTPUT_GENERATED_VISION_RESULTS = "output/out.mp4"
+OUTPUT_RESULTS = OUTPUT_PATH + "results.csv"
 
-INPUT_SAMPLE = "input/sample.mp4"
+OUTPUT_INTERPOLATED_RESULTS = OUTPUT_PATH + "results_interpolated.csv"
+
+OUTPUT_GENERATED_VISION_RESULTS = OUTPUT_PATH + "out.mp4"
+
+INPUT_SAMPLE = INPUT_PATH + "sample.mp4"

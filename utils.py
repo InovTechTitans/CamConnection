@@ -4,7 +4,12 @@ import string
 import easyocr
 
 
-def create_if_not_exist(path):
+def create_path_if_not_exist(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+
+def create_file_if_not_exist(path):
     if not os.path.exists(path):
         with open(path, "w") as _:
             pass

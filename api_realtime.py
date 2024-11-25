@@ -1,7 +1,7 @@
 import cv2
 from flask import Flask, Response
 
-from conectioncam import process_frame
+from ler_placa2 import process_frame
 from constants.urls import URL
 
 app = Flask(__name__)

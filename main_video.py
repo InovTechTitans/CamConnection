@@ -2,11 +2,14 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-from constants.paths import OUTPUT_RESULTS
-from utils import create_if_not_exist, get_car, read_license_plate, write_csv
+from constants.paths import INPUT_PATH, INPUT_SAMPLE, OUTPUT_PATH, OUTPUT_RESULTS
+from utils import create_path_if_not_exist, get_car, read_license_plate, write_csv
 from video.add_missing_data import create_interpolate_date
 from video.sort.sort import Sort
 from video.visualize import show_vizualization
+
+create_path_if_not_exist(INPUT_PATH)
+create_path_if_not_exist(OUTPUT_PATH)
 
 results = {}
 
@@ -17,7 +20,7 @@ coco_model = YOLO("input/yolov8n.pt")
 license_plate_detector = YOLO("./models/license_plate_detector.pt")
 
 # load video
-cap = cv2.VideoCapture('input/sample.mp4')
+cap = cv2.VideoCapture(INPUT_SAMPLE)
 
 
 vehicles = [2, 3, 5, 7]
@@ -25,7 +28,6 @@ vehicles = [2, 3, 5, 7]
 # read frames
 frame_nmr = -1
 ret = True
-create_if_not_exist(OUTPUT_RESULTS)
 
 while ret:
     frame_nmr += 1

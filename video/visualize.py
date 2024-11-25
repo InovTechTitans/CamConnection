@@ -169,7 +169,7 @@ def show_vizualization():
                     pass
 
             out.write(frame)
-            frame = cv2.resize(frame, (1280, 720))
+            frame = cv2.resize(frame, (720, 480))
 
             cv2.imshow("Placas", frame)
             if cv2.waitKey(1) & 0xFF == ord("q"):
